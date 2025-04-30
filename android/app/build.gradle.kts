@@ -5,6 +5,8 @@ plugins {
     id("dev.flutter.flutter-gradle-plugin")
 }
 
+apply plugin: 'com.google.gms.google-services' // Adicione no final
+
 android {
     namespace = "com.example.pokedex"
     compileSdk = flutter.compileSdkVersion
@@ -20,6 +22,8 @@ android {
     }
 
     defaultConfig {
+        applicationId "com.exemplo.pokedex" // deve bater com o Firebase
+
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "com.example.pokedex"
         // You can update the following values to match your application needs.
@@ -42,3 +46,4 @@ android {
 flutter {
     source = "../.."
 }
+apply plugin: 'com.google.gms.google-services'
